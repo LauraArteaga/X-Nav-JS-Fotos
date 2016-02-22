@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title> Imagenes aleatorias </title>
+    <script type="text/javascript" charset="utf-8">
+
+    var photos = ["1.png", "2.png", "3.jpg", "4.jpg","5.png", "6.jpg"]
+
+    function photo_random(){
+      var photo_id = Math.floor(Math.random()*photos.length);
+
+      var element = document.getElementById('show_photo');
+      element.innerHTML = '<img src="' + photos[photo_id] + '">';
+    };
+    </script>
+  </head>
+
+  <body>
+      <a href="javascript:photo_random()"> VER FOTO </a>
+      <p><span id="show_photo"></span></p>
+  </body>
+</html>
